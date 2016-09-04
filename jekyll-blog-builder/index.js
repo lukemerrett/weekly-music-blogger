@@ -39,7 +39,7 @@ tags: [{{tags}}]
     public.buildBlogPost = function(model, callback) {
         private.validateModel(model);
 
-        var filename = model.date.isoDateOnly() + " - " + model.blogTitle + ".markdown";
+        var filename = model.date.isoDateOnly() + " - " + model.blogTitle + "-" + model.date.isoDateOnly() + ".markdown";
 
         var output = private.Mustache.render(private.template, {
             blogTitle: model.blogTitle + " - " + model.date.ukDateOnly(),

@@ -1,6 +1,6 @@
 {
   "name": "jekyll-blog-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Builds blog entries for the Jekyll static page generator",
   "main": "index.js",
   "scripts": {
