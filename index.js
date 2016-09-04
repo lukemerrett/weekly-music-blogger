@@ -2,6 +2,7 @@ var WeeklyMusic = require("weekly-music");
 var MusicMarkdown = require("music-markdown");
 var JekyllBlogBuilder = require("jekyll-blog-builder");
 var config = require("./config.json");
+var fs = require('fs');
 
 var music = new WeeklyMusic(
     config.username, 
@@ -12,8 +13,6 @@ var musicMarkdown = new MusicMarkdown();
 var blogBuilder = new JekyllBlogBuilder();
 
 music.getWeeklyStatsForUser(function(results) {
-    console.log(results);
-
     musicMarkdown.renderMusic(results, function(markdown) {
         var currentDate = new Date();
 
@@ -22,8 +21,11 @@ music.getWeeklyStatsForUser(function(results) {
             date: new Date(),
             tags: ["music"],
             postMarkdown: markdown
-        }, function(output) {
-            console.log(output);
+        }, function(filename, output) {
+            fs.writeFile(filename, output, function(error) {
+                if (error) { console.log(error);};
+                console.log("Ouput successfully to " + filename);
+            });
         });
     });
 });
