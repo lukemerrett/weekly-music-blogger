@@ -10,6 +10,7 @@ module.exports = function() {
 
 {{#albums}}
 **{{artist}} - {{album}}**
+
 Total track plays: {{trackPlayCount}}
 
 {{/albums}}
@@ -18,10 +19,10 @@ Total track plays: {{trackPlayCount}}
 
 {{#tracks}}
 **{{artist}} - {{track}}**
+
 Total track plays: {{trackPlayCount}}
 
-{{/tracks}}
-`;
+{{/tracks}}`;
 
     public.renderMusic = function(music, callback) {
         var output = private.Mustache.render(private.template, music);

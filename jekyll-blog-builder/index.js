@@ -22,11 +22,17 @@ module.exports = function() {
 
     private.template = 
 `---
+
 layout: post
+
 title:  "{{blogTitle}}"
+
 date:   {{dateString}}
+
 tags: [{{tags}}]
+
 ---
+
 
 {{postMarkdown}}`;
 
