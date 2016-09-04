@@ -17,6 +17,15 @@ This will install the 3 modules inside the root project along with all their pre
 npm install
 ```
 
+## Tools used
+
+* [LastFmApi NPM Module](https://github.com/maxkueng/node-lastfmapi)
+    * Wrapper around the Last.FM API simplifying the HTTP calls
+* [Mustache NPM Module](https://www.npmjs.com/package/mustache)
+    * Popular cross language templating library
+* [Jekyll](https://jekyllrb.com/)
+    * Ruby based static site generator used by [GitHub for Pages](https://pages.github.com/)
+
 ## Setup
 
 Populate the `config.json` file in root with your Last.fm API credentials.  You can get an API access key and secret from here: http://www.last.fm/api
