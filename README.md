@@ -38,3 +38,7 @@ From the root directory of the project run:
 ```
 node index.js
 ```
+
+The blog article will be output in the root folder with the filename `yyyy-MM-dd - Coding Music.markdown`.
+
+This can then be added immediately to a Jekyll blog; alternatively the markdown can be extracted and used elsewhere.
