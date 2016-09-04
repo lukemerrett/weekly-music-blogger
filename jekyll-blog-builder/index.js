@@ -39,7 +39,7 @@ tags: [{{tags}}]
     public.buildBlogPost = function(model, callback) {
         private.validateModel(model);
 
-        var filename = model.date.isoDateOnly() + " - " + model.blogTitle + "-" + model.date.isoDateOnly() + ".markdown";
+        var filename = private.buildFilename(model);
 
         var output = private.Mustache.render(private.template, {
             blogTitle: model.blogTitle + " - " + model.date.ukDateOnly(),
@@ -63,6 +63,12 @@ tags: [{{tags}}]
             throw "Must provided model." + property;
         }
     }
+
+    private.buildFilename = function(model) {
+        var dateStamp = model.date.isoDateOnly();
+        var blogTitle = model.blogTitle.toLowerCase().replace(/\s/g, "-");
+        return dateStamp + "-" + blogTitle + "-" + dateStamp + ".markdown";
+    };
 
     return public;
 };
