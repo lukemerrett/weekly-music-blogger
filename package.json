@@ -1,0 +1,30 @@
+{
+  "name": "weekly-music-blogger",
+  "version": "1.0.0",
+  "description": "Pulls Last.fm scrobbles into a Jekyll markdown blog post",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemerrett/weekly-music-blogger.git"
+  },
+  "keywords": [
+    "jekyll",
+    "markdown",
+    "lastfm",
+    "music"
+  ],
+  "author": "Luke Merrett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukemerrett/weekly-music-blogger/issues"
+  },
+  "homepage": "https://github.com/lukemerrett/weekly-music-blogger#readme",
+  "dependencies": {
+    "jekyll-blog-builder": "file:jekyll-blog-builder",
+    "music-markdown": "file:music-markdown",
+    "weekly-music": "file:weekly-music"
+  }
+}

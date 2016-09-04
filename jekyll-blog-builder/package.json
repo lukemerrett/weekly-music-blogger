@@ -1,0 +1,17 @@
+{
+  "name": "jekyll-blog-builder",
+  "version": "1.0.0",
+  "description": "Builds blog entries for the Jekyll static page generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jekyll"
+  ],
+  "author": "Luke Merrett",
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^2.2.1"
+  }
+}

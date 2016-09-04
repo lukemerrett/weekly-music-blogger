@@ -1,0 +1,17 @@
+{
+  "name": "music-markdown",
+  "version": "1.0.0",
+  "description": "Converts collection of musis entries into markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "music", "markdown"
+  ],
+  "author": "Luke Merrett",
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^2.2.1"
+  }
+}
