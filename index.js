@@ -1,11 +1,11 @@
-var WeeklyMusic = require("./weekly-music");
-var MusicMarkdown = require("./music-markdown");
-var JekyllBlogBuilder = require("./jekyll-blog-builder");
+var WeeklyMusic = require("weekly-music");
+var MusicMarkdown = require("music-markdown");
+var JekyllBlogBuilder = require("jekyll-blog-builder");
 var config = require("./config.json");
 
 var music = new WeeklyMusic(
     config.username, 
-    config.apikey, 
+    config.apiKey, 
     config.secret);
 
 var musicMarkdown = new MusicMarkdown();
