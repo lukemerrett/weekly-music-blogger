@@ -1,5 +1,6 @@
 {
     "username": "bob",
     "apiKey": "xxxx",
-    "secret": "xxxx"
+    "secret": "xxxx",
+    "output-folder": "."
 }
