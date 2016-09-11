@@ -1,9 +1,11 @@
 var helpers = function() {
+    var private = this;
+
     Date.prototype.isoDateOnly = function() {
         var mm = this.getMonth() + 1; // getMonth() is zero-based
         var dd = this.getDate();
 
-        return [this.getFullYear(), "-", !mm[1] && "0", mm, "-", !dd[1] && "0", dd].join(""); // padding
+        return [this.getFullYear(), "-", private.padZero(mm), "-", private.padZero(dd)].join(""); // padding
     };
     
     Date.prototype.ukDateOnly = function() {
@@ -11,6 +13,14 @@ var helpers = function() {
         var dd = this.getDate();
 
         return [!dd[1] && "0", dd, "-", !mm[1] && "0", mm, "-", this.getFullYear()].join(""); // padding
+    };
+
+    private.padZero = function(datePart) {
+        var toReturn = datePart;
+        if (datePart < 10) {
+            toReturn = "0" + datePart;
+        }
+        return toReturn
     };
 }();
 
