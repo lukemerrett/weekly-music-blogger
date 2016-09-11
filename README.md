@@ -36,7 +36,8 @@ Sample:
 {
     "username": "bob",
     "apiKey": "xxxx",
-    "secret": "xxxx"
+    "secret": "xxxx",
+    "outputFolder": "."
 }
 ```
 

@@ -22,10 +22,18 @@ music.getWeeklyStatsForUser(function(results) {
             tags: ["music"],
             postMarkdown: markdown
         }, function(filename, output) {
-            fs.writeFile(filename, output, function(error) {
+            var fullPath = buildFilePath(config.outputFolder, filename)
+            fs.writeFile(fullPath, output, function(error) {
                 if (error) { console.log(error);};
-                console.log("Ouput successfully to " + filename);
+                console.log("Ouput successfully to " + fullPath);
             });
         });
     });
 });
+
+var buildFilePath = function (folder, filename) { 
+    if (!folder.endsWith("/")) {
+        folder = folder + "/";
+    }
+    return folder + filename;
+};
