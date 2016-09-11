@@ -9,7 +9,7 @@ module.exports = function() {
 ## Albums listened to
 
 {{#albums}}
-**{{artist}} - {{album}}**
+**[{{artist}} - {{album}}]({{{url}}})**
 
 Total track plays: {{trackPlayCount}}
 
@@ -18,7 +18,7 @@ Total track plays: {{trackPlayCount}}
 ## Tracks listened to
 
 {{#tracks}}
-**{{artist}} - {{track}}**
+**[{{artist}} - {{track}}]({{{url}}})**
 
 Total track plays: {{trackPlayCount}}
 

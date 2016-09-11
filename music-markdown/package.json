@@ -1,6 +1,6 @@
 {
   "name": "music-markdown",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Converts collection of musis entries into markdown",
   "main": "index.js",
   "scripts": {

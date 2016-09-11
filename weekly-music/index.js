@@ -34,7 +34,8 @@ module.exports = function(username, apiKey, secret) {
                 result.albums.push({
                     trackPlayCount: album.playcount, 
                     artist: album.artist["#text"],
-                    album: album.name
+                    album: album.name,
+                    url: album.url
                 });
             });
             
@@ -54,7 +55,8 @@ module.exports = function(username, apiKey, secret) {
                 result.tracks.push({
                     trackPlayCount: playcount, 
                     artist: track.artist["#text"],
-                    track: track.name
+                    track: track.name,
+                    url: track.url
                 });
             });
 

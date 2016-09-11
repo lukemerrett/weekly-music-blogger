@@ -1,6 +1,6 @@
 {
   "name": "weekly-music",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gets all music played in the last 7 days from Last.fm",
   "main": "index.js",
   "scripts": {
