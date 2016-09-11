@@ -5,14 +5,14 @@ var helpers = function() {
         var mm = this.getMonth() + 1; // getMonth() is zero-based
         var dd = this.getDate();
 
-        return [this.getFullYear(), "-", private.padZero(mm), "-", private.padZero(dd)].join(""); // padding
+        return [this.getFullYear(), private.padZero(mm), private.padZero(dd)].join("-");
     };
     
     Date.prototype.ukDateOnly = function() {
         var mm = this.getMonth() + 1; // getMonth() is zero-based
         var dd = this.getDate();
 
-        return [!dd[1] && "0", dd, "-", !mm[1] && "0", mm, "-", this.getFullYear()].join(""); // padding
+        return [private.padZero(dd), private.padZero(mm), this.getFullYear()].join("-");
     };
 
     private.padZero = function(datePart) {
